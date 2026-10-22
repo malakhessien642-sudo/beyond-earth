@@ -5,7 +5,7 @@
    1. SELECT HTML ELEMENTS
 ========================================= */
 
-const pageLoader = document.getElementById("pageLoader");
+
 const siteHeader = document.getElementById("siteHeader");
 
 const menuToggle = document.getElementById("menuToggle");
