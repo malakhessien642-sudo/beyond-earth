@@ -28,28 +28,6 @@ const currentYear = document.getElementById("currentYear");
 const backToTop = document.getElementById("backToTop");
 
 
-/* =========================================
-   2. PAGE LOADER
-========================================= */
-
-function hidePageLoader() {
-  if (pageLoader) {
-    pageLoader.classList.add("loaded");
-
-    setTimeout(function () {
-      pageLoader.style.display = "none";
-    }, 700);
-  }
-}
-
-if (document.readyState === "complete") {
-  hidePageLoader();
-} else {
-  window.addEventListener("load", hidePageLoader);
-}
-
-// Fallback in case the page takes too long to load.
-setTimeout(hidePageLoader, 4000);
 
 
 /* =========================================
