@@ -2,100 +2,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Beyond Earth - An interactive journey through space.">
+  <meta name="theme-color" content="#050816">
+  <meta name="description" content="Beyond Earth — Explore the unknown, discover distant worlds, and begin your journey through space.">
 
-    <title>Beyond Earth | Explore the Universe</title>
+  <title>Beyond Earth | Explore the Unknown</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
+  <div class="space-background" aria-hidden="true">
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+    <div class="stars" id="stars"></div>
+    <div class="shooting-star"></div>
+  </div>
 
-    <header class="navbar">
-        <a href="#" class="logo">BEYOND<span>EARTH</span></a>
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-symbol">✦</span>
+      BEYOND<span class="logo-light">EARTH</span>
+    </a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#planets">Planets</a>
-            <a href="#about">About</a>
-        </nav>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
-    </header>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#discover" class="nav-link">Discover</a>
+      <a href="#mission" class="nav-link">Our Mission</a>
+      <a href="#discover" class="nav-cta">Explore Space ↗</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero" id="home">
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          YOUR JOURNEY STARTS HERE
+        </div>
 
-            <div class="hero-content">
-                <p class="eyebrow">A JOURNEY THROUGH THE COSMOS</p>
+        <h1>
+          EXPLORE THE
+          <span class="gradient-text">UNKNOWN.</span>
+        </h1>
 
-                <h1>
-                    Explore the
-                    <span>Unknown.</span>
-                </h1>
+        <p class="hero-description">
+          Beyond the stars, beyond imagination.
+          Discover the wonders of our universe and
+          journey into the extraordinary.
+        </p>
 
-                <p class="hero-description">
-                    Discover distant worlds, explore mysterious planets,
-                    and experience the beauty of our universe.
-                </p>
+        <div class="hero-actions">
+          <a href="#discover" class="button button-primary">
+            Start Exploring <span>↗</span>
+          </a>
 
-                <a href="#planets" class="explore-btn">
-                    Start Exploring <span>↗</span>
-                </a>
+          <a href="#mission" class="button button-secondary">
+            <span class="play-icon">▶</span>
+            Discover Our Mission
+          </a>
+        </div>
 
-                <div class="hero-info">
-                    <div>
-                        <strong>8</strong>
-                        <span>Planets</span>
-                    </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">8</span>
+            <span class="stat-label">PLANETS</span>
+          </div>
 
-                    <div>
-                        <strong>1</strong>
-                        <span>Solar System</span>
-                    </div>
+          <div class="stat-divider"></div>
 
-                    <div>
-                        <strong>∞</strong>
-                        <span>Possibilities</span>
-                    </div>
-                </div>
-            </div>
+          <div class="stat">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">POSSIBILITIES</span>
+          </div>
 
-            <div class="scroll-hint">
-                SCROLL TO DISCOVER ↓
-            </div>
+          <div class="stat-divider"></div>
 
-        </section>
+          <div class="stat">
+            <span class="stat-number">1</span>
+            <span class="stat-label">UNIVERSE</span>
+          </div>
+        </div>
+      </div>
 
-        <section class="planets-section" id="planets">
-            <p class="eyebrow">OUR COSMIC NEIGHBORHOOD</p>
-            <h2>Worlds Beyond Our Own</h2>
-            <p>Our journey starts with the planets of our solar system.</p>
+      <div class="hero-visual" aria-label="Illustration of a glowing planet">
+        <div class="planet-label label-top">
+          <span class="label-line"></span>
+          <span>DEEP SPACE</span>
+        </div>
 
-            <div class="planet-placeholder">
-                The universe is waiting...
-            </div>
-        </section>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
 
-        <section class="about-section" id="about">
-            <h2>Beyond What We Know</h2>
-            <p>
-                Space is full of wonders waiting to be discovered.
-                This is your gateway to exploring them.
-            </p>
-        </section>
-    </main>
+        <div class="planet">
+          <div class="planet-surface"></div>
+          <div class="planet-shadow"></div>
+          <div class="planet-glow"></div>
+        </div>
 
-    <footer>
-        <p>BEYOND EARTH © 2026 — Explore the Universe</p>
-    </footer>
+        <div class="moon"></div>
 
-    <script src="script.js"></script>
+        <div class="planet-label label-bottom">
+          <span class="label-line"></span>
+          <span>UNKNOWN WORLD · 001</span>
+        </div>
 
+        <div class="visual-cross cross-one">+</div>
+        <div class="visual-cross cross-two">+</div>
+      </div>
+
+      <a href="#discover" class="scroll-indicator">
+        <span class="scroll-line"></span>
+        <span>SCROLL TO DISCOVER</span>
+      </a>
+    </section>
+
+    <section class="discover section reveal" id="discover">
+      <div class="section-heading">
+        <span class="eyebrow">THE UNIVERSE AWAITS</span>
+        <h2>There's More <span class="gradient-text">Out There.</span></h2>
+        <p>
+          Every star holds a story. Every planet is a new world
+          waiting to be explored.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">◉</div>
+          <span class="card-number">01 / WORLDS</span>
+          <h3>Distant Worlds</h3>
+          <p>
+            Discover fascinating planets, mysterious landscapes,
+            and worlds beyond our imagination.
+          </p>
+          <a href="#mission" class="card-link">
+            Discover more <span>↗</span>
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✧</div>
+          <span class="card-number">02 / COSMOS</span>
+          <h3>Cosmic Wonders</h3>
+          <p>
+            Explore the beauty of galaxies, glowing nebulae,
+            and the mysteries of deep space.
+          </p>
+          <a href="#mission" class="card-link">
+            Discover more <span>↗</span>
+          </a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div>
+          <span class="card-number">03 / BEYOND</span>
+          <h3>Future Missions</h3>
+          <p>
+            Follow humanity's curiosity as we reach farther
+            into the great cosmic unknown.
+          </p>
+          <a href="#mission" class="card-link">
+            Discover more <span>↗</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="mission section reveal" id="mission">
+      <div class="mission-orb" aria-hidden="true">
+        <div class="mission-ring"></div>
+        <div class="mission-core">✦</div>
+      </div>
+
+      <div class="mission-content">
+        <span class="eyebrow">OUR MISSION</span>
+        <h2>Curiosity Has <span class="gradient-text">No Limits.</span></h2>
+        <p>
+          Beyond Earth is a journey into the beauty and mystery
+          of space. We believe every great discovery begins with
+          one simple question: what lies beyond?
+        </p>
+        <a href="#home" class="button button-primary">
+          Back to the Beginning ↑
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo">
+      <span class="logo-symbol">✦</span>
+      BEYOND<span class="logo-light">EARTH</span>
+    </a>
+
+    <p>Made for the curious. Inspired by the infinite.</p>
+
+    <span class="footer-copy">© <span id="year"></span> Beyond Earth</span>
+  </footer>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 </body>
 </html>
