@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 76px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(8, 11, 26, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #8be9fd;
+    margin-left: 5px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #c3c9db;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #8be9fd;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 85% 45%,
+            rgba(70, 91, 190, 0.3),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 15% 90%,
+            rgba(112, 49, 171, 0.2),
+            transparent 40%
+        ),
+        #080b1a;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: #8be9fd;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 88px);
+    line-height: 1.08;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #8be9fd;
+}
+
+.hero-description {
+    max-width: 470px;
+    color: #b7bfd5;
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background: #8be9fd;
+    color: #080b1a;
+    padding: 16px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+.hero-info {
+    display: flex;
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.hero-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-info strong {
+    font-size: 26px;
+}
+
+.hero-info span {
+    color: #929bb5;
+    font-size: 12px;
+}
+
+.scroll-hint {
+    position: absolute;
+    right: 8%;
+    bottom: 30px;
+    color: #929bb5;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.planets-section,
+.about-section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.planets-section h2,
+.about-section h2 {
+    font-size: clamp(28px, 6vw, 44px);
+    margin-bottom: 20px;
+}
+
+.planets-section > p:not(.eyebrow),
+.about-section p {
+    color: #b7bfd5;
+    line-height: 1.8;
+}
+
+.planet-placeholder {
+    margin-top: 35px;
+    padding: 60px 20px;
+    border: 1px solid rgba(139, 233, 253, 0.2);
+    border-radius: 12px;
+    color: #8be9fd;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    color: #929bb5;
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 75px 6%;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-info {
+        gap: 22px;
+        margin-top: 45px;
+    }
+
+    .hero-info strong {
+        font-size: 22px;
+    }
+
+    .scroll-hint {
+        right: 6%;
+        font-size: 9px;
+    }
+}
